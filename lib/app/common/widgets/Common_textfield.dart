@@ -46,7 +46,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
       elevation: 0.0,
       color: Colors.white,
       shape: RoundedRectangleBorder(
-        side: BorderSide(color: Colors.white, width: 0.1),
+        side: const BorderSide(color: Colors.white, width: 0.1),
         borderRadius: BorderRadius.circular(10.0),
       ),
       child: Padding(
