@@ -20,3 +20,6 @@ dart pub global activate flutter_gen
 
 ## TO GENERATE ASSETS
 flutter packages pub run build_runner build
+
+## FOR FLUTTER NATIVE SPLASH PACKAGE
+flutter pub run flutter_native_splash:create --path=flutter_native_splash.yaml

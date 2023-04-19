@@ -1,9 +1,8 @@
-class AppTags{
-
-  //Sttings
+class AppTags {
+  // Settings
   static const String languages = "languages";
   static const String settings = "Settings";
-  static const String faq  = "FAQ";
+  static const String faq = "FAQ";
   static const String privacyStatement = "Privacy Statement";
   static const String notificationSettings = "notificationSettings";
   static const String notification = "Notification";
@@ -31,9 +30,9 @@ class AppTags{
 
 //Change Password
   static const String newPassword = "newPassword";
-   static const String confirmNewPassword = "confirmNewPassword";
-   static const String currentPassword = "currentPassword";
-   static const String saveAndChange = "saveAndChange";
+  static const String confirmNewPassword = "confirmNewPassword";
+  static const String currentPassword = "currentPassword";
+  static const String saveAndChange = "saveAndChange";
 
 //personal
   static const String email = "Email";

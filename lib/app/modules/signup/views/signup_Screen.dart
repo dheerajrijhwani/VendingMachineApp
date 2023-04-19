@@ -107,6 +107,7 @@ class SignUpScreen extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
+            // LOGIN BUTTON
             RectangleButton(
               OnPressed: () {},
               title: 'Sign up',
