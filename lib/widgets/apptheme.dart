@@ -17,6 +17,14 @@ class AppthemeData{
     fontSize: 16,
     fontWeight: FontWeight.w600
   );
+  static final explore = TextStyle(
+      color: const Color(0xFF333333),
+      fontFamily: "Poppins Medium",
+      fontSize: 25,
+      fontWeight: FontWeight.w600
+  );
+  static final hintTextStyle_13 = TextStyle(
+      color: const Color(0xff999999), fontFamily: "Poppins", fontSize: 13);
   static final headerTextStyle_22 = TextStyle(
       color: const Color(0xFF333333),
       fontFamily: "Poppins Medium",
