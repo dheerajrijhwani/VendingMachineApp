@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:vending_machine/app/common/app_tags.dart';
+import 'package:vending_machine/app/common/app_theme.dart';
 
 class ProfileContent extends StatelessWidget {
   ProfileContent({Key? key}) : super(key: key);
@@ -54,7 +55,7 @@ class ProfileContent extends StatelessWidget {
                 const SizedBox(
                   height: 10,
                 ),
-                const Text(
+                Text(
                   "Alex Nikifirav",
                   style: AppthemeData.headerTextStyle_16,
                 ),
@@ -104,7 +105,7 @@ class ProfileContent extends StatelessWidget {
                               AppTags.name,
                               style: AppthemeData.sub_headerTextStyle,
                             ),
-                            const Text(
+                            Text(
                               "Alex Nikifirav",
                               style: AppthemeData.headerTextStyle_16,
                             )
@@ -121,7 +122,7 @@ class ProfileContent extends StatelessWidget {
                               AppTags.email,
                               style: AppthemeData.sub_headerTextStyle,
                             ),
-                            const Text(
+                            Text(
                               "alexniki@yahoo.com",
                               style: AppthemeData.headerTextStyle_16,
                             )
@@ -138,7 +139,7 @@ class ProfileContent extends StatelessWidget {
                               AppTags.location,
                               style: AppthemeData.sub_headerTextStyle,
                             ),
-                            const Text(
+                            Text(
                               "San Deigo",
                               style: AppthemeData.headerTextStyle_16,
                             )
@@ -155,7 +156,7 @@ class ProfileContent extends StatelessWidget {
                               AppTags.zipcode,
                               style: AppthemeData.sub_headerTextStyle,
                             ),
-                            const Text(
+                            Text(
                               "1200",
                               style: AppthemeData.headerTextStyle_16,
                             )
@@ -172,7 +173,7 @@ class ProfileContent extends StatelessWidget {
                               AppTags.number,
                               style: AppthemeData.sub_headerTextStyle,
                             ),
-                            const Text(
+                            Text(
                               "(+1)5656678321",
                               style: AppthemeData.headerTextStyle_16,
                             )
