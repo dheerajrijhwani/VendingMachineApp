@@ -99,7 +99,56 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+<<<<<<< Updated upstream
   google_fonts:
+=======
+  flutter_web_plugins:
+    dependency: transitive
+    description: flutter
+    source: sdk
+    version: "0.0.0"
+  frontend_server_client:
+    dependency: transitive
+    description:
+      name: frontend_server_client
+      sha256: "408e3ca148b31c20282ad6f37ebfa6f4bdc8fede5b74bc2f08d9d92b55db3612"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.2.0"
+  get:
+    dependency: "direct main"
+    description:
+      name: get
+      sha256: "2ba20a47c8f1f233bed775ba2dd0d3ac97b4cf32fc17731b3dfc672b06b0e92a"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.6.5"
+  get_storage:
+    dependency: "direct main"
+    description:
+      name: get_storage
+      sha256: "39db1fffe779d0c22b3a744376e86febe4ade43bf65e06eab5af707dc84185a2"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.1"
+  glob:
+    dependency: transitive
+    description:
+      name: glob
+      sha256: "4515b5b6ddb505ebdd242a5f2cc5d22d3d6a80013789debfbda7777f47ea308c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.1"
+  google_fonts:
+    dependency: "direct main"
+    description:
+      name: google_fonts
+      sha256: "927573f2e8a8d65c17931e21918ad0ab0666b1b636537de7c4932bdb487b190f"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.0.3"
+  google_sign_in:
+>>>>>>> Stashed changes
     dependency: "direct main"
     description:
       name: google_fonts
@@ -123,6 +172,17 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.2"
+<<<<<<< Updated upstream
+=======
+  io:
+    dependency: transitive
+    description:
+      name: io
+      sha256: "2ec25704aba361659e10e3e5f5d672068d332fc8ac516421d483a11e5cbd061e"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.4"
+>>>>>>> Stashed changes
   js:
     dependency: transitive
     description:
@@ -328,6 +388,25 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.0"
+<<<<<<< Updated upstream
+=======
+  xml:
+    dependency: transitive
+    description:
+      name: xml
+      sha256: "979ee37d622dec6365e2efa4d906c37470995871fe9ae080d967e192d88286b5"
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.2.2"
+  yaml:
+    dependency: transitive
+    description:
+      name: yaml
+      sha256: "23812a9b125b48d4007117254bca50abb6c712352927eece9e155207b1db2370"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.1"
+>>>>>>> Stashed changes
 sdks:
   dart: ">=2.19.6 <3.0.0"
   flutter: ">=3.3.0"
