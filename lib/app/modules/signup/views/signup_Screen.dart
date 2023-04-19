@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:vending_machine/app/common/widgets/Common_textfield.dart';
+import 'package:vending_machine/app/common/widgets/Custom_textfield.dart';
 import 'package:vending_machine/app/common/widgets/RectangleButton.dart';
+import 'package:vending_machine/screen/botton_navigation.dart';
 
 import '../../../../screen/botton_navigation.dart';
 
@@ -114,7 +115,11 @@ class SignUpScreen extends StatelessWidget {
             // LOGIN BUTTON
             RectangleButton(
               OnPressed: () {
-                Get.to(BottomNavigation());
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const BottomNavigation(),
+                    ));
               },
               title: 'Sign up',
             ),

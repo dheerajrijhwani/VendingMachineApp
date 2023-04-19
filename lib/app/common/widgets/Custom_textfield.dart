@@ -61,7 +61,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
             //   fontFamily: "OpenSans",
             //   fontWeight: FontWeight.w300,
             // ),
-            prefix: widget.prefixImg,
+            prefixIcon: widget.prefixImg,
             border: InputBorder.none,
             hintText: widget.hint,
           ),

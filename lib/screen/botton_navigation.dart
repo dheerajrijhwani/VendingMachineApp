@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:vending_machine/app/common/app_theme.dart';
 import 'package:vending_machine/screen/profile_content.dart';
 import 'package:vending_machine/screen/settings.dart';
-import 'package:vending_machine/app/common/app_theme.dart';
 
 import 'dashboard.dart';
 import 'favorite.dart';
@@ -13,7 +13,12 @@ class BottomNavigation extends StatefulWidget {
   State<BottomNavigation> createState() => _BottomNavigationState();
 }
 
-var navscreen = [DashBoard(), Settings(), HomeScreen(), ProfileContent()];
+var navscreen = [
+   DashBoard(),
+  Settings(),
+  const HomeScreen(),
+  ProfileContent()
+];
 int selectedItem = 0;
 
 class _BottomNavigationState extends State<BottomNavigation> {
@@ -24,36 +29,35 @@ class _BottomNavigationState extends State<BottomNavigation> {
         child: navscreen[selectedItem],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
         currentIndex: selectedItem,
         onTap: (setvalue) {
           setState(() {
             selectedItem = setvalue;
           });
         },
-     //   showSelectedLabels: false,
+        showSelectedLabels: false,
         selectedItemColor: AppthemeData.themeColor,
         iconSize: 30,
         items: [
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
               icon: Icon(Icons.home_outlined, color: Colors.grey),
               activeIcon: Icon(
                 Icons.home_outlined,
               ),
               label: "home"),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
               icon: Icon(Icons.shopping_cart_outlined, color: Colors.grey),
               activeIcon: Icon(
                 Icons.shopping_cart_outlined,
               ),
               label: "cart"),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
               icon: Icon(Icons.favorite_border, color: Colors.grey),
               activeIcon: Icon(
                 Icons.favorite_border,
               ),
               label: "favorite"),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
               icon: Icon(
                 Icons.perm_identity,
                 color: Colors.grey,

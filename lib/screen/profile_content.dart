@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vending_machine/app/common/app_theme.dart';
 
-import '../app/common/app_tags.dart';
 
 class ProfileContent extends StatelessWidget {
   ProfileContent({Key? key}) : super(key: key);
@@ -45,7 +43,7 @@ class ProfileContent extends StatelessWidget {
                           offset: const Offset(0, 5))
                     ],
                     shape: BoxShape.circle,
-                    image: DecorationImage(
+                    image: const DecorationImage(
                       fit: BoxFit.cover,
                       image: NetworkImage(
                         "https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg",
@@ -56,7 +54,7 @@ class ProfileContent extends StatelessWidget {
                 const SizedBox(
                   height: 10,
                 ),
-                Text(
+                const Text(
                   "Alex Nikifirav",
                   style: AppthemeData.headerTextStyle_16,
                 ),
@@ -86,7 +84,7 @@ class ProfileContent extends StatelessWidget {
                 "Personal Information",
                 style: AppthemeData.headerTextStyle_22,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               Card(
@@ -106,7 +104,7 @@ class ProfileContent extends StatelessWidget {
                               AppTags.name,
                               style: AppthemeData.sub_headerTextStyle,
                             ),
-                            Text(
+                            const Text(
                               "Alex Nikifirav",
                               style: AppthemeData.headerTextStyle_16,
                             )
@@ -123,7 +121,7 @@ class ProfileContent extends StatelessWidget {
                               AppTags.email,
                               style: AppthemeData.sub_headerTextStyle,
                             ),
-                            Text(
+                            const Text(
                               "alexniki@yahoo.com",
                               style: AppthemeData.headerTextStyle_16,
                             )
@@ -140,7 +138,7 @@ class ProfileContent extends StatelessWidget {
                               AppTags.location,
                               style: AppthemeData.sub_headerTextStyle,
                             ),
-                            Text(
+                            const Text(
                               "San Deigo",
                               style: AppthemeData.headerTextStyle_16,
                             )
@@ -157,7 +155,7 @@ class ProfileContent extends StatelessWidget {
                               AppTags.zipcode,
                               style: AppthemeData.sub_headerTextStyle,
                             ),
-                            Text(
+                            const Text(
                               "1200",
                               style: AppthemeData.headerTextStyle_16,
                             )
@@ -174,7 +172,7 @@ class ProfileContent extends StatelessWidget {
                               AppTags.number,
                               style: AppthemeData.sub_headerTextStyle,
                             ),
-                            Text(
+                            const Text(
                               "(+1)5656678321",
                               style: AppthemeData.headerTextStyle_16,
                             )
