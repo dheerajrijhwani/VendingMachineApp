@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:vending_machine/app/common/app_theme.dart';
 import 'package:vending_machine/screen/profile_content.dart';
 import 'package:vending_machine/screen/settings.dart';
-import 'package:vending_machine/widgets/apptheme.dart';
 
 import 'dashboard.dart';
 import 'favorite.dart';
@@ -14,7 +14,7 @@ class BottomNavigation extends StatefulWidget {
 }
 
 var navscreen = [
-  const DashBoard(),
+   DashBoard(),
   Settings(),
   const HomeScreen(),
   ProfileContent()

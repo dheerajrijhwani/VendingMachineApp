@@ -14,3 +14,12 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+## FOR FLUTTER GEN
+## TO ACTIVATE FLUTTER GEN IN YOUR PROJECT
+dart pub global activate flutter_gen
+
+## TO GENERATE ASSETS
+flutter packages pub run build_runner build
+
+## FOR FLUTTER NATIVE SPLASH PACKAGE
+flutter pub run flutter_native_splash:create --path=flutter_native_splash.yaml

@@ -32,7 +32,7 @@ class Settings extends StatelessWidget {
       ),
       body: Column(
         children: <Widget>[
-          const ListTile(
+           ListTile(
             title: Text(
               AppTags.emailSupport,
               style: AppthemeData.settingsTitleStyle,
@@ -42,7 +42,7 @@ class Settings extends StatelessWidget {
               size: 18,
             ),
           ),
-          const ListTile(
+           ListTile(
             title: Text(
               AppTags.faq,
               style: AppthemeData.settingsTitleStyle,
@@ -52,7 +52,7 @@ class Settings extends StatelessWidget {
               size: 18,
             ),
           ),
-          const ListTile(
+           ListTile(
             title: Text(
               AppTags.privacyStatement,
               style: AppthemeData.settingsTitleStyle,
@@ -63,7 +63,7 @@ class Settings extends StatelessWidget {
             ),
           ),
           ListTile(
-              title: const Text(
+              title:  Text(
                 AppTags.notification,
                 style: AppthemeData.settingsTitleStyle,
               ),

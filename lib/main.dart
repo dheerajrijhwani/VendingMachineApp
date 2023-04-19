@@ -1,6 +1,6 @@
-// ignore_for_file: unused_import
-
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:vending_machine/app/modules/login/views/login_Screen.dart';
 import 'package:vending_machine/app/modules/splash/views/splash_Screen.dart';
 
 void main() {
@@ -12,13 +12,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
+    return GetMaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const SplashScreen(),
+      home: const LoginScreen(),
     );
   }
 }

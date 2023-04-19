@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:vending_machine/widgets/apptags.dart';
-import 'package:vending_machine/widgets/apptheme.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);

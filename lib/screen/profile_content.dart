@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vending_machine/widgets/apptheme.dart';
 
-import '../widgets/apptags.dart';
 
 class ProfileContent extends StatelessWidget {
   ProfileContent({Key? key}) : super(key: key);
