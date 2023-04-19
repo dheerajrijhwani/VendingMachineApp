@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:vending_machine/app/common/app_tags.dart';
 import 'package:vending_machine/app/common/app_theme.dart';
 
@@ -14,7 +15,6 @@ class Settings extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-
         leading: IconButton(
           icon: const Icon(
             Icons.arrow_back,
