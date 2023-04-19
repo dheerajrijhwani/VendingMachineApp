@@ -22,13 +22,14 @@ class _BottomNavigationState extends State<BottomNavigation> {
         child:navscreen[selectedItem] ,
       ),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         currentIndex: selectedItem,
         onTap: (setvalue){
           setState(() {
             selectedItem=setvalue;
           });
         },
-        showSelectedLabels: false,
+     //   showSelectedLabels: false,
         selectedItemColor: AppthemeData.themeColor,
         iconSize: 30,
         items: [

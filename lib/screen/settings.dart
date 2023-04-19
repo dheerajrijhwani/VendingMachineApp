@@ -17,15 +17,15 @@ class Settings extends StatelessWidget {
      appBar:AppBar(
        backgroundColor: Colors.transparent,
        elevation: 0,
-       // leading: IconButton(
-       //   icon: const Icon(
-       //     Icons.arrow_back,
-       //     color: Colors.black,
-       //   ),
-       //   onPressed: () {
-       //  Get.back();
-       //   },
-       // ),
+       leading: IconButton(
+         icon: const Icon(
+           Icons.arrow_back,
+           color: Colors.black,
+         ),
+         onPressed: () {
+        Get.back();
+         },
+       ),
        centerTitle: true,
        title: Text(
          AppTags.settings,
@@ -82,13 +82,13 @@ class Settings extends StatelessWidget {
              AppTags.update,
              style: AppthemeData.settingsTitleStyle,
            ),
-           trailing:Obx(
-           ()=> Switch(value: isToggle, onChanged: (bool value) {
-
-             },
-
-             ),
-           )
+           // trailing:Obx(
+           // ()=> Switch(value: isToggle, onChanged: (bool value) {
+           //
+           //   },
+           //
+           //   ),
+           // )
          ),
        ],
      ),

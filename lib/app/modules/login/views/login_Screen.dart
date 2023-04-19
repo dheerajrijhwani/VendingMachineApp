@@ -1,6 +1,8 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vending_machine/app/modules/signup/views/signup_Screen.dart';
 
@@ -87,7 +89,8 @@ class LoginScreen extends StatelessWidget {
             ),
             const SizedBox(),
             RectangleButton(
-              OnPressed: () {},
+              OnPressed: () {
+              },
               title: 'Log in',
             ),
             const SizedBox(
