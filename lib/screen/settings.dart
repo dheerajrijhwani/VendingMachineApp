@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:vending_machine/widgets/apptags.dart';
-import 'package:vending_machine/widgets/apptheme.dart';
+import 'package:vending_machine/app/common/app_tags.dart';
+import 'package:vending_machine/app/common/app_theme.dart';
 
 class Settings extends StatelessWidget {
   Settings({Key? key}) : super(key: key);
@@ -32,7 +31,7 @@ class Settings extends StatelessWidget {
       ),
       body: Column(
         children: <Widget>[
-           ListTile(
+          ListTile(
             title: Text(
               AppTags.emailSupport,
               style: AppthemeData.settingsTitleStyle,
@@ -42,7 +41,7 @@ class Settings extends StatelessWidget {
               size: 18,
             ),
           ),
-           ListTile(
+          ListTile(
             title: Text(
               AppTags.faq,
               style: AppthemeData.settingsTitleStyle,
@@ -52,7 +51,7 @@ class Settings extends StatelessWidget {
               size: 18,
             ),
           ),
-           ListTile(
+          ListTile(
             title: Text(
               AppTags.privacyStatement,
               style: AppthemeData.settingsTitleStyle,
@@ -63,7 +62,7 @@ class Settings extends StatelessWidget {
             ),
           ),
           ListTile(
-              title:  Text(
+              title: Text(
                 AppTags.notification,
                 style: AppthemeData.settingsTitleStyle,
               ),
