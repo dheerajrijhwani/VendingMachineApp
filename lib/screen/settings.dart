@@ -15,6 +15,7 @@ class Settings extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
+<<<<<<< Updated upstream
         // leading: IconButton(
         //   icon: const Icon(
         //     Icons.arrow_back,
@@ -24,6 +25,17 @@ class Settings extends StatelessWidget {
         //  Get.back();
         //   },
         // ),
+=======
+        leading: IconButton(
+          icon: const Icon(
+            Icons.arrow_back,
+            color: Colors.black,
+          ),
+          onPressed: () {
+            Get.back();
+          },
+        ),
+>>>>>>> Stashed changes
         centerTitle: true,
         title: Text(
           AppTags.settings,
@@ -31,12 +43,18 @@ class Settings extends StatelessWidget {
         ),
       ),
       body: Column(
+<<<<<<< Updated upstream
         children: <Widget>[
            ListTile(
+=======
+        children: [
+          ListTile(
+>>>>>>> Stashed changes
             title: Text(
               AppTags.emailSupport,
               style: AppthemeData.settingsTitleStyle,
             ),
+<<<<<<< Updated upstream
             trailing: Icon(
               Icons.arrow_forward_ios,
               size: 18,
@@ -58,12 +76,39 @@ class Settings extends StatelessWidget {
               style: AppthemeData.settingsTitleStyle,
             ),
             trailing: Icon(
+=======
+            trailing: const Icon(
+>>>>>>> Stashed changes
               Icons.arrow_forward_ios,
               size: 18,
             ),
           ),
           ListTile(
+<<<<<<< Updated upstream
               title:  Text(
+=======
+            title: Text(
+              AppTags.faq,
+              style: AppthemeData.settingsTitleStyle,
+            ),
+            trailing: const Icon(
+              Icons.arrow_forward_ios,
+              size: 18,
+            ),
+          ),
+          ListTile(
+            title: Text(
+              AppTags.privacyStatement,
+              style: AppthemeData.settingsTitleStyle,
+            ),
+            trailing: const Icon(
+              Icons.arrow_forward_ios,
+              size: 18,
+            ),
+          ),
+          ListTile(
+              title: Text(
+>>>>>>> Stashed changes
                 AppTags.notification,
                 style: AppthemeData.settingsTitleStyle,
               ),
@@ -71,6 +116,7 @@ class Settings extends StatelessWidget {
                 value: isSelected,
                 onChanged: (bool value) {},
               )),
+<<<<<<< Updated upstream
           // ListTile(
           //     title: const Text(
           //       AppTags.update,
@@ -82,6 +128,21 @@ class Settings extends StatelessWidget {
           //         onChanged: (bool value) {},
           //       ),
           //     )),
+=======
+          ListTile(
+            title: Text(
+              AppTags.update,
+              style: AppthemeData.settingsTitleStyle,
+            ),
+            // trailing:Obx(
+            // ()=> Switch(value: isToggle, onChanged: (bool value) {
+            //
+            //   },
+            //
+            //   ),
+            // )
+          ),
+>>>>>>> Stashed changes
         ],
       ),
     );
