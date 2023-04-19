@@ -1,9 +1,13 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vending_machine/app/common/widgets/Common_textfield.dart';
 import 'package:vending_machine/app/common/widgets/RectangleButton.dart';
+
+import '../../../../screen/botton_navigation.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
@@ -109,7 +113,9 @@ class SignUpScreen extends StatelessWidget {
             ),
             // LOGIN BUTTON
             RectangleButton(
-              OnPressed: () {},
+              OnPressed: () {
+                Get.to(BottomNavigation());
+              },
               title: 'Sign up',
             ),
             const SizedBox(

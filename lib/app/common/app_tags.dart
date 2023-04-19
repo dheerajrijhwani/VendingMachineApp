@@ -16,6 +16,7 @@ class AppTags {
   static const String privacyPolicy = "privacyPolicy";
   static const String termsCondition = "termsCondition";
   static const String emailSupport = "Email Support";
+  static const String searchProduct = "Search Product";
 
   //Profile
   static const String editProfile = "editProfile";
