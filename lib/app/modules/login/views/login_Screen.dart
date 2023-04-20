@@ -2,8 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:vending_machine/app/common/widgets/Custom_textfield.dart';
+import 'package:vending_machine/app/common/widgets/RectangleButton.dart';
 import 'package:vending_machine/app/modules/signup/views/signup_Screen.dart';
 import 'package:vending_machine/app/routes/routes.dart';
 
@@ -42,7 +43,7 @@ class LoginScreen extends StatelessWidget {
               height: 50,
             ),
 
-            //TextField(),
+            // EMAIL TEXT FORM FIELD,
             CustomTextField(
               baseColor: Colors.grey,
               borderColor: Colors.grey[400],
