@@ -6,4 +6,5 @@ class Routes {
   static const signup = '/signup';
   static const settings = '/settings';
   static const NavigationBar = '/navigationBar';
+  static const ProfileContent = '/profilecontent';
 }

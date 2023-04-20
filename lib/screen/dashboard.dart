@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:vending_machine/app/common/app_theme.dart';
 import 'package:vending_machine/gen/assets.gen.dart';
+import 'package:vending_machine/screen/profile_content.dart';
 
 import '../app/routes/routes.dart';
 
@@ -67,122 +68,155 @@ class _DashBoardState extends State<DashBoard> with TickerProviderStateMixin {
             ),
             Padding(
               padding: const EdgeInsets.all(18.0),
-              child: Row(
-                children: [
-                  CircleAvatar(
-                    radius: 35,
-                    backgroundColor: Colors.orange.shade700,
-                    child: Image.network(
-                      "https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg",
-                      fit: BoxFit.contain,
+              child: InkWell(
+                onTap: () {},
+                child: Row(
+                  children: [
+                    Container(
+                      width: 70,
+                      height: 70,
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          width: 0,
+                        ),
+                        boxShadow: [
+                          BoxShadow(
+                              spreadRadius: 2,
+                              blurRadius: 10,
+                              color: Colors.black.withOpacity(0.1),
+                              offset: const Offset(0, 5))
+                        ],
+                        shape: BoxShape.circle,
+                        image: const DecorationImage(
+                          fit: BoxFit.cover,
+                          image: NetworkImage(
+                            "https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg",
+                          ),
+                        ),
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Column(
-                    children: [
-                      Text(
-                        "Alex Nikiforov",
-                        style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.w500),
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Text(
-                        "Fashion Designer",
-                        style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.grey),
-                      ),
-                    ],
-                  ),
-                  Spacer(),
-                  Icon(
-                    Icons.arrow_forward_ios,
-                    color: Colors.grey,
-                  )
-                ],
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Column(
+                      children: [
+                        Text(
+                          "Alex Nikiforov",
+                          style: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.w500),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          "Fashion Designer",
+                          style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.grey),
+                        ),
+                      ],
+                    ),
+                    Spacer(),
+                    // Icon(
+                    //   Icons.arrow_forward_ios,
+                    //   color: Colors.grey,
+                    // )
+                  ],
+                ),
               ),
             ),
-            ListTile(
-              leading: Image.asset(
-                "assets/images/myFav.png",
-                height: 35,
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ListTile(
+                leading: Image.asset(
+                  "assets/images/myFav.png",
+                  height: 40,
+                ),
+                title: const Text(' Profile  '),
+                onTap: () {
+                  Get.toNamed(Routes.ProfileContent);
+                },
               ),
-              title: const Text(' My Favorites '),
-              onTap: () {
-                Navigator.pop(context);
-              },
             ),
-            ListTile(
-              leading: Image.asset(
-                "assets/images/wallets.png",
-                height: 35,
+            // ListTile(
+            //   leading: Image.asset(
+            //     "assets/images/wallets.png",
+            //     height: 35,
+            //   ),
+            //   title: const Text(' Wallets  '),
+            //   onTap: () {
+            //     Navigator.pop(context);
+            //   },
+            // ),
+            // ListTile(
+            //   leading: Image.asset(
+            //     "assets/images/myOrders.png",
+            //     height: 35,
+            //   ),
+            //   title: const Text(' My Orders  '),
+            //   onTap: () {
+            //     Navigator.pop(context);
+            //   },
+            // ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ListTile(
+                leading: Image.asset(
+                  "assets/images/Aboutus.png",
+                  height: 40,
+                ),
+                title: const Text(' About Us  '),
+                onTap: () {
+                  Navigator.pop(context);
+                },
               ),
-              title: const Text(' Wallets  '),
-              onTap: () {
-                Navigator.pop(context);
-              },
             ),
-            ListTile(
-              leading: Image.asset(
-                "assets/images/myOrders.png",
-                height: 35,
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ListTile(
+                leading: Image.asset(
+                  "assets/images/privacy.png",
+                  height: 40,
+                ),
+                title: const Text(' Privacy Policy  '),
+                onTap: () {
+                  Navigator.pop(context);
+                },
               ),
-              title: const Text(' My Orders  '),
-              onTap: () {
-                Navigator.pop(context);
-              },
             ),
-            ListTile(
-              leading: Image.asset(
-                "assets/images/Aboutus.png",
-                height: 35,
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ListTile(
+                leading: Image.asset(
+                  "assets/images/Settings.png",
+                  height: 40,
+                ),
+                title: const Text(' Settings  '),
+                onTap: () {
+                  Get.toNamed(Routes.settings);
+                },
               ),
-              title: const Text(' About Us  '),
-              onTap: () {
-                Navigator.pop(context);
-              },
             ),
-            ListTile(
-              leading: Image.asset(
-                "assets/images/privacy.png",
-                height: 35,
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ListTile(
+                leading: Image.asset(
+                  "assets/images/LogOut.png",
+                  height: 40,
+                ),
+                title: const Text(' Log out  '),
+                onTap: () {
+                  Get.toNamed(Routes.login);
+                },
               ),
-              title: const Text(' Privacy Policy  '),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              leading: Image.asset(
-                "assets/images/Settings.png",
-                height: 35,
-              ),
-              title: const Text(' Settings  '),
-              onTap: () {
-                Get.toNamed(Routes.settings);
-              },
-            ),
-            ListTile(
-              leading: Image.asset(
-                "assets/images/LogOut.png",
-                height: 35,
-              ),
-              title: const Text(' Log out  '),
-              onTap: () {
-                Navigator.pop(context);
-              },
             ),
             SizedBox(
               height: 50,
             ),
-            Align(
-                alignment: Alignment.bottomCenter,
-                child: Assets.images.logo.image(height: 50))
+            // Align(
+            //     alignment: Alignment.bottomCenter,
+            //     child: Assets.images.logo.image(height: 50))
           ],
         ),
       ),

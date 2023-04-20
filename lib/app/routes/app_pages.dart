@@ -5,6 +5,7 @@ import 'package:vending_machine/app/modules/signup/bindings/signup_binding.dart'
 import 'package:vending_machine/app/modules/signup/views/signup_Screen.dart';
 import 'package:vending_machine/app/routes/routes.dart';
 import 'package:vending_machine/screen/botton_navigation.dart';
+import 'package:vending_machine/screen/profile_content.dart';
 import 'package:vending_machine/screen/settings.dart';
 
 class AppPages {
@@ -23,6 +24,10 @@ class AppPages {
     GetPage(
       name: Routes.NavigationBar,
       page: () => BottomNavigation(),
+    ),
+    GetPage(
+      name: Routes.ProfileContent,
+      page: () => ProfileContent(),
     )
   ];
 }
