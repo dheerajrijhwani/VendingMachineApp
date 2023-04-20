@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:vending_machine/app/common/app_theme.dart';
+import 'package:vending_machine/gen/assets.gen.dart';
+
+import '../app/routes/routes.dart';
 
 class DashBoard extends StatefulWidget {
   DashBoard({Key? key}) : super(key: key);
@@ -38,7 +41,9 @@ class _DashBoardState extends State<DashBoard> with TickerProviderStateMixin {
               color: Color(0xFFF67952),
               size: 25,
             ),
-            onPressed: () {},
+            onPressed: () {
+              Scaffold.of(context).openDrawer();
+            },
           );
         }),
         title: Text("15/2 New Texas"),
@@ -54,13 +59,11 @@ class _DashBoardState extends State<DashBoard> with TickerProviderStateMixin {
           )
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      drawer: Drawer(
         child: ListView(
-          padding: const EdgeInsets.all(0),
           children: [
             SizedBox(
-              height: 50,
+              height: 30,
             ),
             Padding(
               padding: const EdgeInsets.all(18.0),
@@ -71,6 +74,7 @@ class _DashBoardState extends State<DashBoard> with TickerProviderStateMixin {
                     backgroundColor: Colors.orange.shade700,
                     child: Image.network(
                       "https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg",
+                      fit: BoxFit.contain,
                     ),
                   ),
                   SizedBox(
@@ -160,11 +164,8 @@ class _DashBoardState extends State<DashBoard> with TickerProviderStateMixin {
               ),
               title: const Text(' Settings  '),
               onTap: () {
-                Navigator.pop(context);
+                Get.toNamed(Routes.settings);
               },
-            ),
-            SizedBox(
-              height: 40,
             ),
             ListTile(
               leading: Image.asset(
@@ -176,9 +177,23 @@ class _DashBoardState extends State<DashBoard> with TickerProviderStateMixin {
                 Navigator.pop(context);
               },
             ),
+            SizedBox(
+              height: 50,
+            ),
+            Align(
+                alignment: Alignment.bottomCenter,
+                child: Assets.images.logo.image(height: 50))
+          ],
+        ),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        child: ListView(
+          padding: const EdgeInsets.all(0),
+          children: [
             Text(
               "Explore",
-              style: AppthemeData.headerTextStyle_16,
+              style: AppthemeData.explore,
             ),
             SizedBox(
               height: 10,
@@ -288,7 +303,7 @@ class _DashBoardState extends State<DashBoard> with TickerProviderStateMixin {
                   itemBuilder: (BuildContext context, int index) {
                     return InkWell(
                       onTap: () {
-                        //Get.to(ProductDetail());
+                        // Get.to(ProductDetail());
                       },
                       child: Card(
                         shape: RoundedRectangleBorder(

@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vending_machine/app/modules/signup/views/signup_Screen.dart';
+import 'package:vending_machine/app/routes/routes.dart';
 
 import '../../../common/widgets/Custom_textfield.dart';
 import '../../../common/widgets/RectangleButton.dart';
@@ -90,6 +91,7 @@ class LoginScreen extends StatelessWidget {
             const SizedBox(),
             RectangleButton(
               OnPressed: () {
+                Get.toNamed(Routes.NavigationBar);
               },
               title: 'Log in',
             ),

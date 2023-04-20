@@ -6,6 +6,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vending_machine/app/common/widgets/Custom_textfield.dart';
 import 'package:vending_machine/app/common/widgets/RectangleButton.dart';
+import 'package:vending_machine/app/routes/routes.dart';
 import 'package:vending_machine/screen/botton_navigation.dart';
 
 import '../../../../screen/botton_navigation.dart';
@@ -115,11 +116,7 @@ class SignUpScreen extends StatelessWidget {
             // LOGIN BUTTON
             RectangleButton(
               OnPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const BottomNavigation(),
-                    ));
+                Get.toNamed(Routes.NavigationBar);
               },
               title: 'Sign up',
             ),
