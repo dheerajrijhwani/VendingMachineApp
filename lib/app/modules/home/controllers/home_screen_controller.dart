@@ -62,11 +62,11 @@ class HomeScreenController extends GetxController {
   // GETTING ADDRESS FROM LATITUDE AND LONGITUDE USING GEOCODING PACKAGE
   Future<void> _getAddressFromLatLng(Position position) async {
     await placemarkFromCoordinates(position.latitude, position.longitude)
-        .then((List<Placemark> placemarks) {
-      Placemark place = placemarks[0];
+        .then((List<Placemark> placeMarks) {
+      Placemark place = placeMarks[0];
 
       currentAddress.value =
-          '${place.street}, ${place.subLocality}, ${place.subAdministrativeArea}, ${place.postalCode}';
+          '${place.street}, ${place.locality} ,${place.subThoroughfare} ,${place.subLocality}, ${place.subAdministrativeArea}, ${place.postalCode}';
       debugPrint("current address : ${currentAddress.value}");
     }).catchError((e) {
       debugPrint(e);

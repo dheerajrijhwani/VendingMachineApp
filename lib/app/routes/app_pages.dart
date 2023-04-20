@@ -1,12 +1,11 @@
 import 'package:get/get.dart';
-import 'package:vending_machine/app/modules/home/bindings/home_screen_binding.dart';
-import 'package:vending_machine/app/modules/home/views/home_screen.dart';
 import 'package:vending_machine/app/modules/login/bindngs/login_binding.dart';
 import 'package:vending_machine/app/modules/login/views/login_Screen.dart';
 import 'package:vending_machine/app/modules/signup/bindings/signup_binding.dart';
 import 'package:vending_machine/app/modules/signup/views/signup_Screen.dart';
 import 'package:vending_machine/app/routes/routes.dart';
 import 'package:vending_machine/screen/botton_navigation.dart';
+import 'package:vending_machine/screen/profile_content.dart';
 import 'package:vending_machine/screen/settings.dart';
 
 class AppPages {
