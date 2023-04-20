@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:vending_machine/app/modules/home/controllers/home_screen_controller.dart';
+import 'package:vending_machine/app/routes/routes.dart';
 import 'package:vending_machine/widgets/apptheme.dart';
 
 class HomeScreen extends GetView<HomeScreenController> {
@@ -68,8 +69,11 @@ class HomeScreen extends GetView<HomeScreenController> {
                 "Current Address",
                 style: AppthemeData.settingsTitleStyle,
               ),
-              const SizedBox(
-                height: 15,
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 12.0),
+                child: Obx(() => controller.currentAddress.value != ""
+                    ? Text(controller.currentAddress.value ?? '')
+                    : const Text("Address")),
               ),
               Expanded(
                 flex: 1,
@@ -77,12 +81,14 @@ class HomeScreen extends GetView<HomeScreenController> {
                   itemCount: 8,
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisSpacing: 10,
-                      childAspectRatio: 2 / 2.5,
+                      childAspectRatio: 2 / 2.3,
                       mainAxisSpacing: 20,
                       crossAxisCount: 2),
                   itemBuilder: (BuildContext context, int index) {
                     return InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Get.toNamed(Routes.vendingMachineDetail);
+                      },
                       child: Card(
                         shape: RoundedRectangleBorder(
                           side: const BorderSide(

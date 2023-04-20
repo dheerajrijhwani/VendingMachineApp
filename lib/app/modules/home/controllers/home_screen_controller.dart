@@ -66,7 +66,7 @@ class HomeScreenController extends GetxController {
       Placemark place = placeMarks[0];
 
       currentAddress.value =
-          '${place.street}, ${place.locality} ,${place.subThoroughfare} ,${place.subLocality}, ${place.subAdministrativeArea}, ${place.postalCode}';
+          '${place.street}, ${place.name}, ${place.subLocality},${place.subAdministrativeArea}, ${place.postalCode}';
       debugPrint("current address : ${currentAddress.value}");
     }).catchError((e) {
       debugPrint(e);

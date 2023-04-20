@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vending_machine/app/modules/login/views/login_Screen.dart';
-import 'package:vending_machine/app/modules/splash/views/splash_Screen.dart';
 import 'package:vending_machine/app/routes/app_pages.dart';
-import 'package:vending_machine/app/routes/routes.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 

@@ -6,5 +6,8 @@ class Routes {
   static const signup = '/signup';
   static const settings = '/settings';
   static const NavigationBar = '/navigationBar';
+  static const home = '/home';
   static const ProfileContent = '/profilecontent';
+  static const vendingMachineDetail = '/vendingMachine';
+  static const scanQr = '/scanQr';
 }
