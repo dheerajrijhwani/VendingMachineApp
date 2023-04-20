@@ -116,7 +116,7 @@ class SignUpScreen extends StatelessWidget {
             // LOGIN BUTTON
             RectangleButton(
               OnPressed: () {
-                Get.toNamed(Routes.NavigationBar);
+                Get.toNamed(Routes.home);
               },
               title: 'Sign up',
             ),

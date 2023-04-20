@@ -22,12 +22,12 @@ class AppPages {
         binding: SignupBinding()),
     GetPage(name: Routes.settings, page: () => Settings()),
     GetPage(
-      name: Routes.NavigationBar,
-      page: () => BottomNavigation(),
+      name: Routes.navigationBar,
+      page: () => const BottomNavigation(),
     ),
     GetPage(
-      name: Routes.ProfileContent,
-      page: () => ProfileContent(),
-    )
+        name: Routes.home,
+        page: () => const HomeScreen(),
+        binding: HomeScreenBinding())
   ];
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ProductDetail extends StatefulWidget {
-  const ProductDetail({Key? key}) : super(key: key);
+   ProductDetail(Map map, {Key? key}) : super(key: key);
 
   @override
   State<ProductDetail> createState() => _ProductDetailState();
