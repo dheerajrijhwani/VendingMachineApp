@@ -1,13 +1,10 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:vending_machine/app/common/widgets/Custom_textfield.dart';
+import 'package:vending_machine/app/common/widgets/RectangleButton.dart';
 import 'package:vending_machine/app/modules/signup/views/signup_Screen.dart';
-
-import '../../../common/widgets/Custom_textfield.dart';
-import '../../../common/widgets/RectangleButton.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -41,7 +38,7 @@ class LoginScreen extends StatelessWidget {
               height: 50,
             ),
 
-            //TextField(),
+            // EMAIL TEXT FORM FIELD,
             CustomTextField(
               baseColor: Colors.grey,
               borderColor: Colors.grey[400],
@@ -89,8 +86,7 @@ class LoginScreen extends StatelessWidget {
             ),
             const SizedBox(),
             RectangleButton(
-              OnPressed: () {
-              },
+              OnPressed: () {},
               title: 'Log in',
             ),
             const SizedBox(
