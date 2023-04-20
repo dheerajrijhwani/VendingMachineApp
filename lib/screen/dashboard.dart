@@ -151,7 +151,7 @@ class _DashBoardState extends State<DashBoard> with TickerProviderStateMixin{
                    itemBuilder: (BuildContext context, int index) {
                      return InkWell(
                        onTap: (){
-                         Get.to(ProductDetail());
+                         Get.to(ProductDetail({}));
                        },
                        child: Card(
                          shape: RoundedRectangleBorder(
