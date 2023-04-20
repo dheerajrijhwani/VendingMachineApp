@@ -112,9 +112,9 @@ class _DashBoardState extends State<DashBoard> with TickerProviderStateMixin{
                        ),
                      );
                    },),
-
-
-             )
+                Center(child: Text("Out of Stock"))
+               ])
+             ,)
 
             ],
           ),

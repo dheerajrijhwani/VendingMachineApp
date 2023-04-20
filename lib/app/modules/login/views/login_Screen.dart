@@ -2,11 +2,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:vending_machine/app/common/widgets/Custom_textfield.dart';
+import 'package:vending_machine/app/common/widgets/RectangleButton.dart';
 import 'package:vending_machine/app/modules/signup/views/signup_Screen.dart';
+import 'package:vending_machine/app/routes/routes.dart';
 
-import '../../../common/widgets/Common_textfield.dart';
+import '../../../common/widgets/Custom_textfield.dart';
 import '../../../common/widgets/RectangleButton.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -41,19 +43,19 @@ class LoginScreen extends StatelessWidget {
               height: 50,
             ),
 
-            //TextField(),
+            // EMAIL TEXT FORM FIELD,
             CustomTextField(
               baseColor: Colors.grey,
               borderColor: Colors.grey[400],
               errorColor: Colors.red,
               //controller: _email,
-              hint: "Email",
+              hint: " Email",
               inputType: TextInputType.emailAddress,
               // validator: Validator.validateEmail,
               onChanged: () {},
               prefixImg: Image.asset(
                 "assets/images/emailPrifix.png",
-                height: 25,
+                height: 22,
               ),
             ),
             const SizedBox(
@@ -65,7 +67,7 @@ class LoginScreen extends StatelessWidget {
               errorColor: Colors.red,
               //controller: _password,
               obscureText: true,
-              hint: "Password",
+              hint: " Password",
               // validator: Validator.validatePassword,
               onChanged: () {},
               prefixImg: Image.asset(
@@ -90,6 +92,7 @@ class LoginScreen extends StatelessWidget {
             const SizedBox(),
             RectangleButton(
               OnPressed: () {
+                Get.toNamed(Routes.NavigationBar);
               },
               title: 'Log in',
             ),
