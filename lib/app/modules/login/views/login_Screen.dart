@@ -92,7 +92,7 @@ class LoginScreen extends StatelessWidget {
             const SizedBox(),
             RectangleButton(
               OnPressed: () {
-                Get.toNamed(Routes.NavigationBar);
+                Get.toNamed(Routes.home);
               },
               title: 'Log in',
             ),

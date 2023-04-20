@@ -1,4 +1,6 @@
 import 'package:get/get.dart';
+import 'package:vending_machine/app/modules/home/bindings/home_screen_binding.dart';
+import 'package:vending_machine/app/modules/home/views/home_screen.dart';
 import 'package:vending_machine/app/modules/login/bindngs/login_binding.dart';
 import 'package:vending_machine/app/modules/login/views/login_Screen.dart';
 import 'package:vending_machine/app/modules/signup/bindings/signup_binding.dart';
@@ -21,8 +23,12 @@ class AppPages {
         binding: SignupBinding()),
     GetPage(name: Routes.settings, page: () => Settings()),
     GetPage(
-      name: Routes.NavigationBar,
-      page: () => BottomNavigation(),
-    )
+      name: Routes.navigationBar,
+      page: () => const BottomNavigation(),
+    ),
+    GetPage(
+        name: Routes.home,
+        page: () => const HomeScreen(),
+        binding: HomeScreenBinding())
   ];
 }
