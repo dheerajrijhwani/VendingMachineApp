@@ -14,12 +14,7 @@ class DashBoard extends StatefulWidget {
 
 class _DashBoardState extends State<DashBoard> with TickerProviderStateMixin{
   @override
-  List<String> bannerImage = [
-    "assets/images/choclate3.jpg",
-    "assets/images/choclate.jpg",
-    "assets/images/choclate2.jpg",
 
-  ];
 
    Widget build(BuildContext context) {
     TabController tabController = TabController(length: 2, vsync: this, );
@@ -40,7 +35,23 @@ class _DashBoardState extends State<DashBoard> with TickerProviderStateMixin{
             );
           }
       ),
-           title: Text("15/2 New Texas"),
+           title: Container(
+             height: 40,
+             child: TextFormField(
+               decoration: InputDecoration(
+                   prefixIcon: Icon(Icons.search,color: AppthemeData.themeColor,size: 30,),
+                   suffixIcon: Image.asset("assets/images/filter.png",height: 10,width: 10,),
+                   alignLabelWithHint: true,
+                   border: const OutlineInputBorder(
+                     borderRadius: BorderRadius.all(Radius.circular(12.0)),),
+                   focusedBorder: const OutlineInputBorder(
+                     borderRadius: BorderRadius.all(Radius.circular(12.0)),
+                     borderSide: BorderSide(color: Color(0xFFF67952), width: 0.5),
+                   )
+
+               ),
+             ),
+           ),
             centerTitle: true,
             actions: [
              Padding(
@@ -53,97 +64,12 @@ class _DashBoardState extends State<DashBoard> with TickerProviderStateMixin{
           padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
           child: ListView(
             children: [
-              Text("Explore",style: AppthemeData.explore,),
-            SizedBox(height: 10,),
-            Text("Best recommendation for you",style: AppthemeData.sub_headerTextStyle,),
-              SizedBox(height: 20,),
-            TextFormField(
-              decoration: InputDecoration(
-                prefixIcon: Icon(Icons.search,color: AppthemeData.themeColor,size: 30,),
-                suffixIcon: Image.asset("assets/images/filter.png",height: 10,width: 10,),
-                alignLabelWithHint: true,
-                border: const OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(12.0)),),
-                    focusedBorder: const OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(12.0)),
-                      borderSide: BorderSide(color: Color(0xFFF67952), width: 0.5),
-                    )
+   Text("Current Address",style: AppthemeData.headerTextStyle_22,),
 
-                ),
-            ),
      SizedBox(height: 15,),
 
-         Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-           children: [
-             Container(
-               height: 60,
-               width: 80,
-               decoration: BoxDecoration(
-                 border: Border.all(),
-                 borderRadius: BorderRadius.circular(10)
-               ),
-               child: Container(
-                 child: Image.asset("assets/images/candy.png"),
-               ),
-             ),
-             Container(
-               height: 60,
-               width: 80,
-               decoration: BoxDecoration(
-                   border: Border.all(),
-                   borderRadius: BorderRadius.circular(10)
-               ),
-               child: Container(
-                 child: Image.asset("assets/images/choco.jpg"),
-               ),
-             ),
-             Container(
-               height: 60,
-               width: 80,
-               decoration: BoxDecoration(
-                   border: Border.all(),
-                   borderRadius: BorderRadius.circular(10)
-               ),
-               child: Container(
-                 child: Image.asset("assets/images/combo.jpg"),
-               ),
-             ),
-             Container(
-               height: 60,
-               width: 80,
-               decoration: BoxDecoration(
-                   border: Border.all(),
-                   borderRadius: BorderRadius.circular(10)
-               ),
-               child: Container(
-                 child: Image.asset("assets/images/cc.png"),
-               ),
-             )
-           ],
-         ),
-              Padding(
-                padding: const EdgeInsets.only(top: 10),
-                child: TabBar(
-                    controller: tabController,
-                                      labelColor: Color(0xFFF67952),
-                                      unselectedLabelColor: Color(0xFF004664),
-                                      indicatorColor: Color(0xFFF67952),
-                                      indicatorSize: TabBarIndicatorSize.label,
-                                      padding: EdgeInsets.only(left: 15),
-                                      indicatorPadding: EdgeInsets.zero,
-                                      labelPadding: EdgeInsets.symmetric(horizontal: 40),
-                                      isScrollable: true,
-                                      labelStyle: AppthemeData.headerTextStyle_16,
-                                      tabs: [
-                                        Tab(text:"New Arrivals" ),
-                                        Tab(text:"See All" ),
-
-                                  ]),
-              ),
-           SizedBox(height: 400,
-           child:TabBarView(
-               controller: tabController,
-               children: [
+           SizedBox(height: 650,
+           child:
                  GridView.builder(
                    itemCount: 8,
                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount
@@ -151,7 +77,7 @@ class _DashBoardState extends State<DashBoard> with TickerProviderStateMixin{
                    itemBuilder: (BuildContext context, int index) {
                      return InkWell(
                        onTap: (){
-                         Get.to(ProductDetail({}));
+
                        },
                        child: Card(
                          shape: RoundedRectangleBorder(
@@ -186,9 +112,9 @@ class _DashBoardState extends State<DashBoard> with TickerProviderStateMixin{
                        ),
                      );
                    },),
-                Center(child: Text("Out of Stock"))
-               ])
-             ,)
+
+
+             )
 
             ],
           ),
