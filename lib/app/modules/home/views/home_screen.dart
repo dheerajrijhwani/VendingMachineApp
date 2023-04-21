@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vending_machine/app/common/widgets/url_launch.dart';
 import 'package:vending_machine/app/modules/home/controllers/home_screen_controller.dart';
 import 'package:vending_machine/app/routes/routes.dart';
 import 'package:vending_machine/widgets/apptheme.dart';
@@ -9,6 +10,7 @@ class HomeScreen extends GetView<HomeScreenController> {
 
   @override
   Widget build(BuildContext context) {
+    UrlLaunchers urlLaunchers = UrlLaunchers();
     return Scaffold(
         resizeToAvoidBottomInset: false,
         extendBodyBehindAppBar: false,
@@ -22,7 +24,9 @@ class HomeScreen extends GetView<HomeScreenController> {
                 color: Color(0xFFF67952),
                 size: 25,
               ),
-              onPressed: () {},
+              onPressed: () {
+                Scaffold.of(context).openDrawer();
+              },
             );
           }),
           title: TextFormField(
@@ -59,6 +63,133 @@ class HomeScreen extends GetView<HomeScreenController> {
               ),
             )
           ],
+        ),
+        drawer: Drawer(
+          child: ListView(
+            children: [
+              SizedBox(
+                height: 30,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(18.0),
+                child: Row(
+                  children: [
+                    Container(
+                      width: 70,
+                      height: 70,
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          width: 0,
+                        ),
+                        boxShadow: [
+                          BoxShadow(
+                              spreadRadius: 2,
+                              blurRadius: 10,
+                              color: Colors.black.withOpacity(0.1),
+                              offset: const Offset(0, 5))
+                        ],
+                        shape: BoxShape.circle,
+                        image: const DecorationImage(
+                          fit: BoxFit.cover,
+                          image: NetworkImage(
+                            "https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg",
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Column(
+                      children: [
+                        Text(
+                          "Alex Nikiforov",
+                          style: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.w500),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          "Fashion Designer",
+                          style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.grey),
+                        ),
+                      ],
+                    ),
+                    Spacer(),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ListTile(
+                  leading: Image.asset(
+                    "assets/images/myFav.png",
+                    height: 40,
+                  ),
+                  title: const Text(' Profile  '),
+                  onTap: () {
+                    Get.toNamed(Routes.ProfileContent);
+                  },
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ListTile(
+                  leading: Image.asset(
+                    "assets/images/Aboutus.png",
+                    height: 40,
+                  ),
+                  title: const Text(' About Us  '),
+                  onTap: () {
+                    urlLaunchers.launcher1();
+                  },
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ListTile(
+                  leading: Image.asset(
+                    "assets/images/privacy.png",
+                    height: 40,
+                  ),
+                  title: const Text(' Privacy Policy  '),
+                  onTap: () {
+                    urlLaunchers.launcher1();
+                  },
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ListTile(
+                  leading: Image.asset(
+                    "assets/images/Settings.png",
+                    height: 40,
+                  ),
+                  title: const Text(' Settings  '),
+                  onTap: () {
+                    Get.toNamed(Routes.settings);
+                  },
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ListTile(
+                  leading: Image.asset(
+                    "assets/images/LogOut.png",
+                    height: 40,
+                  ),
+                  title: const Text(' Log out  '),
+                  onTap: () {
+                    Get.toNamed(Routes.login);
+                  },
+                ),
+              )
+            ],
+          ),
         ),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
