@@ -48,7 +48,8 @@ class VendingMachineDetailScreen
                   itemBuilder: (BuildContext context, int index) {
                     return InkWell(
                       onTap: () {
-                        Get.toNamed(Routes.scanQr);
+                        Get.toNamed(Routes.successScreen);
+                      //  Get.toNamed(Routes.scanQr);
                       },
                       child: Card(
                         shape: RoundedRectangleBorder(

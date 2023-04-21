@@ -29,12 +29,13 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   awesome_dialog: ^3.0.2
-
+  lottie: ^2.3.2
   flutter:
     sdk: flutter
   get: ^4.6.1
   get_storage: ^2.0.3
   google_sign_in: ^5.2.4
+
 
   #Localization
   flutter_gen: ^5.2.0
