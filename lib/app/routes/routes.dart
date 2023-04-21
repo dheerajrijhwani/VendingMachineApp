@@ -10,4 +10,5 @@ class Routes {
   static const ProfileContent = '/profilecontent';
   static const vendingMachineDetail = '/vendingMachine';
   static const scanQr = '/scanQr';
+  static const successScreen = '/sucessScreen';
 }

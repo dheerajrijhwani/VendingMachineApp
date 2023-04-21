@@ -49,16 +49,6 @@ class HomeScreen extends GetView<HomeScreenController> {
                 )),
           ),
           centerTitle: true,
-          actions: [
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Image.asset(
-                "assets/images/Group 218.png",
-                height: 40,
-                width: 40,
-              ),
-            )
-          ],
         ),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),

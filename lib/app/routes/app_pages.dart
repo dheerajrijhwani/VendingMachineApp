@@ -13,6 +13,8 @@ import 'package:vending_machine/app/routes/routes.dart';
 
 import 'package:vending_machine/screen/settings.dart';
 
+import '../../screen/succes_screen.dart';
+
 class AppPages {
   static const initialRoute = Routes.login;
 
@@ -38,5 +40,10 @@ class AppPages {
         name: Routes.scanQr,
         page: () => const ScanQrScreen(),
         binding: ScanQrBinding()),
+    GetPage(
+        name: Routes.successScreen,
+        page: () => SuccessScreen(),
+       // binding: ScanQrBinding()
+    ),
   ];
 }
